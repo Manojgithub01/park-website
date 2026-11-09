@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenleaf Park</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Greenleaf Park</h1>
+    <p>Open daily, 6:00 AM to 8:00 PM</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Visitor information</h2>
+      <p>Walking tracks, a children's play area, a lake and a small cafe.</p>
+      <p>Entry: Adult 20, Child 10, under 5 free (demo prices).</p>
+    </section>
+
+    <section>
+      <h2>Tickets</h2>
+      <p>Online booking is coming soon.</p>
+    </section>
+
+    <section>
+      <h2>Report an issue</h2>
+      <p>Found a broken bench or a safety problem? Email <code>help@greenleaf.example</code>.</p>
+    </section>
+  </main>
+
+  <footer>
+    Greenleaf Park (fictional demo site) | Served by <span id="server">...</span>
+  </footer>
+
+  <script>
+    fetch('instance.txt')
+      .then(function (r) { return r.text(); })
+      .then(function (t) { document.getElementById('server').textContent = t.trim(); })
+      .catch(function () { document.getElementById('server').textContent = 'unknown'; });
+  </script>
+</body>
+</html>
